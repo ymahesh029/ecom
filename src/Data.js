@@ -51,6 +51,13 @@ export const Categories = [
         title:"SUMMER sale 3",
         desc:"Dont t ",
         bg:"f5fafd",
+    },
+    {
+        id:4,
+        img:"https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
+        title:"SUMMER sale 4",
+        desc:"Dont t ",
+        bg:"f5fafd",
     }
    
 ]

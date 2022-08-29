@@ -3,6 +3,7 @@ import Anousment from "./components/Anousment";
 import Navbar from "./components/Navbar";
 import Slider from "./components/Slider";
 import Categorie from "./components/Categories";
+import Products from "./components/Products";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Navbar />
       <Slider />
       <Categorie />
+      <Products />
     </div>
   );
 };
