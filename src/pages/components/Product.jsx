@@ -1,61 +1,87 @@
 import React from "react";
 import styled from "styled-components";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+// import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-const Conatiner = styled.div`
-  background-color: #220e0e;
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+const Info = styled.div`
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+`;
+
+const Container = styled.div`
   flex: 1;
   margin: 5px;
   min-width: 280px;
   height: 350px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: #f5fbfd;
+  position: relative;
+  &:hover ${Info} {
+    opacity: 1;
+  }
 `;
-const Circle = styled.div`
-  background-color: #1def1d
-  padding: 200px;
-  display: flex;
 
+const Circle = styled.div`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
 `;
-const Images = styled.img`
-  background-color: yellow;
-  padding: 20px;
-  display: flex;
+
+const Image = styled.img`
   height: 75%;
+  z-index: 2;
 `;
-const Info = styled.div`
-  background-color: yellow;
-  padding: 20px;
-  display: flex;
-`;
+
 const Icon = styled.div`
-  background-color: yellow;
-  padding: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: #e9f5f5;
+    transform: scale(1.1);
+  }
 `;
 
 const Product = ({ item }) => {
   return (
-    <Conatiner>
-      {/* {item.id}
-      {item.img} */}
+    <Container>
       <Circle />
-      <Images src={item.img} />
+      <Image src={item.img} />
       <Info>
         <Icon>
-          {" "}
-          <AddShoppingCartOutlinedIcon />
+          <ShoppingCartOutlinedIcon />
         </Icon>
         <Icon>
-          {" "}
           <SearchOutlinedIcon />
         </Icon>
         <Icon>
-          <FavoriteBorderOutlinedIcon />{" "}
+          <FavoriteBorderOutlinedIcon />
         </Icon>
       </Info>
-    </Conatiner>
+    </Container>
   );
 };
 

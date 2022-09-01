@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Product from "./Product";
 
 const Conatiner = styled.div`
-  background-color: #bd892a;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
